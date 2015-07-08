@@ -22,6 +22,6 @@ object Tag {
     case Date.value => Date
     case Time.value => Time
     case Preposition.value => Preposition
-    case tag@_ => throw UnknownTagException(tag)
+    case tag @ _ => throw UnknownTagException(tag)
   }
 }

@@ -9,7 +9,7 @@ import com.evojam.nlp.model.entity.Date
 
 case class DateTemplate(value: String) {
   require(value != null, "value cannot be null")
-  require(value.nonEmpty, "value cennot be empty")
+  require(value.nonEmpty, "value cannot be empty")
 
   private val MinDate = new DateTime(1990, 1, 1, 0, 0)
   private val MinHours = 4000
@@ -23,7 +23,7 @@ case class DateTemplate(value: String) {
   }
 
   private def format(date: DateTime): String =
-    DateTimeFormat.forPattern(value).print(date).toLowerCase()
+    DateTimeFormat.forPattern(value).print(date).toLowerCase
 
   private def pickDate(greaterThan: DateTime = MinDate): DateTime =
     greaterThan.plusHours(MinHours + Random.nextInt(MaxHours))
