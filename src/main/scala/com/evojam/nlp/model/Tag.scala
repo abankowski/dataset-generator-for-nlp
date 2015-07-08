@@ -6,7 +6,7 @@ case class Tag(value: String) {
   require(value != null, "value cannot be null")
   require(value.nonEmpty, "value cannot be empty")
 
-  override def toString() = value
+  override def toString = value
 }
 
 object Tag {

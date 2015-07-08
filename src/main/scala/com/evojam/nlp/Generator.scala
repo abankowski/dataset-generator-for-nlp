@@ -47,10 +47,9 @@ object Generator extends App {
     list(Random.nextInt(list.size))
   }
 
-  println(s"Artists: ${artists.size}, Venues: ${venues.size}, DateTemplates: ${dateTemplates.size}, Expressions:
-    $ {expressions.size}")
+  println(s"Artists: ${artists.size}, Venues: ${venues.size}, DateTemplates: ${dateTemplates.size}, Expressions: ${expressions.size}")
 
-  val trainingSetSize = 100
+  val trainingSetSize = 5000
 
   val out = new FileOutputStream("out.train")
 
